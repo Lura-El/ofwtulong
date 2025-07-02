@@ -1,0 +1,89 @@
+html{
+    background-color: #f3f3f3;
+}
+body{
+    background-color: white;
+    height: 100vh;
+    margin-left: 16vw;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+#header-sub-con{
+    border-bottom: 5px solid black;
+    padding-top: 1rem;
+}
+
+#nav-con ul{
+    display: flex;
+    list-style: none;
+    background-color: rgb(17, 17, 16);
+    margin-top: 1rem;
+}
+.button{
+    color: white;
+    font-size: 1.3rem;
+    border:none;
+    background-color: transparent;
+    margin-right: 1rem;
+    padding: .5rem;
+}
+.button.active{
+    background-color: #f3f3f3;
+    color: black;
+}
+
+/* sidebar */
+#profile{
+    text-align: center;
+}
+#profile-pic {
+    background-color: white;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    padding: 2rem;
+    margin: auto auto;
+    margin-top: 2rem;
+    margin-bottom: .3rem;
+}
+#sidebar {
+  height: 100%;
+  width: 15vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: .5rem;
+  color: white;
+  background-color: #111;
+  overflow-x: hidden;
+}
+#sidebar ul{
+    list-style: none;
+}
+.side-btn{
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-top: 2rem;
+    text-align: center;
+}
+.side-btn.active{
+    border-bottom: 2px solid white;
+}
+
+/* data */
+
+table th{
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+}
+table td{
+    padding: 0 .5rem;
+}
+#see-all-btn{
+    background-color: transparent;
+    border: none;
+    color: blue;
+    cursor: pointer;
+}

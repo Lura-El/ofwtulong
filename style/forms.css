@@ -1,0 +1,252 @@
+#contact-us{
+    display: none;
+    border-radius: 10px;
+    height: 100vh;
+    margin-bottom: 5rem;
+}
+#contact-us-title, #membership-title, #tulong-form-title{
+    background-color: #111;
+    padding: 5rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+#contact-sub-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-us-text{
+    width: 40vw;
+}
+#text-con{
+    margin-bottom: 2rem;
+}
+#contact-us-text h1{
+    font-size: 2rem;
+}
+#contact-us-text p{
+    font-size: 1.1rem;
+}
+#contact-form{
+    background-color: white;
+    border: 1px solid #ccc; /* Defines the border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Uniform shadow */
+    margin: 2rem;
+    width: 45vw;
+    
+}
+#contact-form form{
+    padding: 3rem 3rem 3rem 3.5rem;
+    margin: auto auto;
+    
+}
+#contact-form #name{
+    width: 33.8vw;
+}
+#contact-form input{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1rem 0 1rem .3rem;
+    margin: .4rem 0;
+    width: 16.5vw;
+}
+#send-mes-btn{
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: .8rem 1.5rem;
+    color: white;
+    background: black;
+    margin-top: .4rem;
+    font-size: 1.1rem;
+}
+#message-area{
+    height: 12rem;
+    width: 33.8vw;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+/* membership form*/
+
+#membership{
+    display: none;
+}
+#membership-form input{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1rem 1rem 1rem .3rem;
+    font-size: .8rem;
+    margin: .4rem 0;
+    min-width: 18vw;
+    background-color: #fcfcfc;
+}
+#membership-form{
+    margin: auto auto;
+    width: 85vw;
+    margin-bottom: 5rem;
+}
+#membership-form h1{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+#membership-form div{
+    display: inline-block;
+     margin: 0 .5rem 0 .5rem;
+}
+#membership-form span, #tulong-form span{
+    color:red;
+}
+#membership-btn button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    background-color: black;
+    color: white;
+    width: 10rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    margin-bottom: 1rem; 
+}
+
+/* request assistance form  */
+#request-assistance{
+    display: none;
+}
+#request-assist-title{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 13rem;
+}
+#tulong-form{
+    width: 80vw;
+    margin: 0 auto;
+}
+.con-input{
+    display: inline-block;
+    padding: 1rem 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 22.5rem;
+}
+.con-input input, #gender{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: .8rem 0 .8rem .3rem;
+    margin: .4rem 0;
+    background-color: #fcfcfc;
+    width: 22rem;
+}
+#saudi-con input{
+    width: 46.75rem;
+}
+#agency input{
+    width: 71.5rem;
+}
+#upload-file input{
+    padding: 0;
+    width: 12rem;
+}
+#complaint-mes{
+    border: black 1px solid;
+    width: 100%;
+    height: 15vh;
+    border-radius: 10px;
+    margin-top: .8rem;
+    padding-left: .3rem;
+}
+#complaint-mes-con{
+    margin-top: 2rem;
+    width: 71.5rem
+}
+#req-sub-btn{
+    border: none;
+    background-color: transparent;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: .7rem 1.2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+hr{
+    border: 1px dotted #ccc;
+    margin-left: 1rem;
+    width: 71rem;
+}
+
+
+@media (max-width: 1200px) {
+
+    /* contact-us */
+    #contact-sub-con{
+        display: block;
+        width: 100vw;
+    }
+    #contact-us-text{
+        width: 90vw;
+        margin: auto auto;
+        margin-top: 2rem;
+    }
+    #contact-form{
+        width: 90vw;
+        padding: .1rem;
+    }
+    
+    #contact-form #name{
+        width: 62vw;
+    }
+    #contact-form input{
+        width: 30vw;
+    }
+     #message-area{
+       width: 62vw;
+    }
+
+    /* membership */
+
+    #membership-form input{
+        min-width: 70vw;
+    }
+     #membership-form div{
+        margin-left: 1rem;
+    }
+    #complaint-mes{
+        width: 70vw;
+    }
+
+     /* request assistance form   */
+
+      #saudi-con input{
+            width: 22rem;
+        }
+        #agency input{
+            width: 22rem;
+        }
+        #complaint-mes{
+            width: 22rem;
+        }
+        
+}
+
+ @media (max-width:540px){
+        #saudi-con input{
+            width: 22rem;
+        }
+        #agency input{
+            width: 22rem;
+        }
+        #complaint-mes{
+            width: 22rem;
+        }
+        #request-assist-title{
+            margin-left: 4rem;
+        }
+        
+    }
