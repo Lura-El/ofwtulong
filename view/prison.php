@@ -1,6 +1,6 @@
 <div id="prison" class="tab">
     <div id="img-con" style="margin-right: .5rem;">
-        <img src="/ofwtulong/images/prison.jpg" alt="prison-monitoring">
+        <img src="images/prison.jpg" alt="prison-monitoring">
     </div>
     <div id="sub-con">
         <section>

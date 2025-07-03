@@ -1,6 +1,6 @@
 <div id="health" class="tab">
     <div id="img-con" style="margin-right: .5rem;">
-        <img src="/ofwtulong/images/health.jpg" alt="mental-health">
+        <img src="images/health.jpg" alt="mental-health">
     </div>
     <div id="sub-con">
         <section>

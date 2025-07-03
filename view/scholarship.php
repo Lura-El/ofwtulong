@@ -1,6 +1,6 @@
 <div id="scholarship" class="tab">
     <div id="img-con" style="margin-right: .5rem;">
-        <img src="/ofwtulong/images/scholar.jpg" alt="scholarship">
+        <img src="images/scholar.jpg" alt="scholarship">
     </div>
     <div id="sub-con">
         <section>

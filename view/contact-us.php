@@ -22,7 +22,7 @@
                 </article>
                 <div id="contact-form">
 
-                    <form action="/ofwtulong/controller/contact-us.con.php" method="POST" >
+                    <form action="controller/contact-us.con.php" method="POST" >
 
                         <label for="name"></label>
                         <input type="text" name="name" placeholder="Name" id="name"> <br>

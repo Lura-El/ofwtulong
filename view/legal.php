@@ -15,6 +15,6 @@
         </section>
     </div>
     <div id="img-con">
-        <img src="/ofwtulong/images/legal.jpg" alt="legal-assistance">
+        <img src="images/legal.jpg" alt="legal-assistance">
     </div>
 </div>

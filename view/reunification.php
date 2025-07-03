@@ -15,6 +15,6 @@
         </section>
     </div>
     <div id="img-con">
-        <img src="/ofwtulong/images/reunification.jpg" alt="family-reunification">
+        <img src="images/reunification.jpg" alt="family-reunification">
     </div>
 </div>

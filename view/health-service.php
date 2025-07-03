@@ -15,6 +15,6 @@
         </section>
     </div>
     <div id="img-con">
-        <img src="/ofwtulong/images/health-service.jpg" alt="health-service">
+        <img src="images/health-service.jpg" alt="health-service">
     </div>
 </div>

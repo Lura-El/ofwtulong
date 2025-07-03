@@ -81,9 +81,27 @@ table th{
 table td{
     padding: 0 .5rem;
 }
-#see-all-btn{
+.see-all-btn{
     background-color: transparent;
     border: none;
     color: blue;
     cursor: pointer;
+}
+.details-container{
+    position: absolute;
+    top: 12rem;
+    z-index: 999;
+    border: 2px solid #ccc;
+    padding: .5rem 2rem 1rem .5rem;
+    font-size: 1.2rem;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+.done-btn{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: .3rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
 }

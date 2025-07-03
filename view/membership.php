@@ -1,6 +1,6 @@
 <section id="membership" class="tab">
     <h1 id="membership-title">Membership</h1>
-    <form action="/ofwtulong/controller/membership.con.php" method="POST" id="membership-form">
+    <form action="controller/membership.con.php" method="POST" id="membership-form">
         <h1>Personal Information</h1>
 
         <div>

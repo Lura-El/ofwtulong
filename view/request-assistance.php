@@ -3,7 +3,7 @@
     <h1 id="tulong-form-title">Ofw Tulong</h1>
     <h1 id="request-assist-title">Request Assistance Form</h1>
 
-    <form action="/ofwtulong/controller/request-assistance.con.php" method="POST" enctype="multipart/form-data" id="tulong-form">
+    <form action="controller/request-assistance.con.php" method="POST" enctype="multipart/form-data" id="tulong-form">
         
         <div class="con-input">
             <label for="first-name">First Name / Pangalan <span>*</span></label><br>

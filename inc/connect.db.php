@@ -9,9 +9,9 @@
 
     try{
         $pdo = new PDO($dsn, $dbuser, $dbpass);
-        if($pdo){
-            echo "Connected to the $dbname database is successful";
-        }
+        // if($pdo){
+        //     echo "Connected to the $dbname database is successful";
+        // }
     } catch(PDOException $e){
         die($e->getMessage());
     }

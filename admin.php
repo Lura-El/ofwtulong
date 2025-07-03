@@ -39,15 +39,11 @@
     
     <div id="dashboard">
         <div id="contact-us-con" class="tab">
-            <table>
-                <th>ID</th>
-                <th>Full name</th>
-                <th>Email address</th>
-                <tr>
-                    <td>1</td>
-                    <td>El</td>
-                    <td>el@gmail.com</td>
-                    <td><button id="see-all-btn">See all</button></td>
+            <table id="contact-table">
+                <tr id="contact-header">
+                    <th>ID</th>
+                    <th>Full name</th>
+                    <th>Email address</th>
                 </tr>
             </table>
         </div>
@@ -55,11 +51,6 @@
         <div id="membership-con" class="tab"></div>
         <div id="request-assistance-con" class="tab"></div>
 
-        <!-- when the see all button is click this tab will appear to show all the details -->
-        <div id="contact-us-alldetails">
-            <div>Name:</div>
-            <div></div>
-        </div>
     </div>
 
  </body>

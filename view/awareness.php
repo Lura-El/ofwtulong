@@ -1,6 +1,6 @@
 <div id="awareness" class="tab">
     <div id="img-con" style="margin-right: .5rem;">
-        <img src="/ofwtulong/images/awareness.jpg" alt="community-awareness">
+        <img src="images/awareness.jpg" alt="community-awareness">
     </div>
     <div id="sub-con">
         <section>
