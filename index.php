@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ofwtulong/style/index.css"> 
-    <link rel="stylesheet" href="/ofwtulong/style/forms.css"> 
-    <link rel="stylesheet" href="/ofwtulong/style/pages.css"> 
+    <link rel="stylesheet" href="style/index.css"> 
+    <link rel="stylesheet" href="style/forms.css"> 
+    <link rel="stylesheet" href="style/pages.css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/ofwtulong/script/index.js" defer></script>
+    <script src="script/index.js" defer></script>
     <title>OFW Tulong</title>
 </head>
 <body>

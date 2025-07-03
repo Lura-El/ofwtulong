@@ -12,16 +12,18 @@ $(document).ready(function() {
         $(targetTab).show();
     });
 
-    $(document).on('click', function (e) {
-    if (!$(e.target).closest('.container, #main-nav').length) {
-        $('#main-nav').hide();
-        $('.container').show().removeClass('active');
-    }
-    });
-
     $('.container').on('click', function (e) {
         e.stopPropagation();
         $(this).addClass('active').hide();
         $('#main-nav').show();
+
+        if($('.container').hasClass('active')){
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.container, #main-nav').length) {
+                    $('#main-nav').hide();
+                    $('.container').show().removeClass('active');
+                }
+            });
+        }
     });
 });
