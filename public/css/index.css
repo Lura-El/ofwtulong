@@ -37,7 +37,7 @@ nav{
 }
 .button, .others-btn, .helpdesk-btn {
     margin: 1rem 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
     color: white;
 }
@@ -60,17 +60,17 @@ a{
     top: 100%;
     background: #333;
     padding: .2rem 0;
-    width: 15vw;
+    width: 14rem;
  }
 #sub-nav2{
     z-index: 1;
     display: none;
     position: absolute;
-    left: -123%;
+    left: -135%;
     top: 100%;
     background: #333;
     padding: .2rem 0;
-    width: 16.5vw;
+    width: 14.5rem;
 }
 
 .button.active{
@@ -140,9 +140,13 @@ footer{
 #footer-li li{
     padding-bottom: .2rem;
 }
+@media (min-width: 1051px) and (max-width: 1255px) {
+    .button, .others-btn, .helpdesk-btn {
+        font-size: 1rem;
+    }
+}
 
-
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
     /* bar */
    .container{
         display: inline-block;
@@ -161,7 +165,7 @@ footer{
 
     #sub-nav1, #sub-nav2{
         left: 0; 
-        width: 60vw;
+        width: 50vw;
         padding-left: 0;
         padding-right: 0;
     }
@@ -172,7 +176,6 @@ footer{
     .dropdown2:hover #sub-nav2 {
         display: block;
         position: relative;
-        
     }
     #home-con{
         width: 90vw;
@@ -193,13 +196,6 @@ footer{
     }
     #footer-li{
         margin-top: 1rem;
-    }
+    }  
 
-    @media (min-width: 620px) {
-    
-    #sub-nav1, #sub-nav2{
-        width: 30vw;
-    }
-   
-}
 }

@@ -26,15 +26,15 @@
                         <label for="name"></label>
                         <input type="text" name="name" placeholder="Name" id="name"> <br>
                         <label for="email"></label>
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="Email" required id="c-email">
                         <label for="phone"></label>
-                        <input type="tel" name="phone" placeholder="Phone" required> <br>
+                        <input type="tel" name="phone" placeholder="Phone" required id="c-phone"> <br>
     
                         <label for="message"></label>
                         <textarea name="message" placeholder="Message" id="message-area" required></textarea><br>
                     
                         <button type="submit" id="send-mes-btn">Send Message</button>
-                </form>
+                    </form>
                 </div>
                 
         </div>

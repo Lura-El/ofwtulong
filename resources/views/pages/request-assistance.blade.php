@@ -1,10 +1,13 @@
 <section id="request-assistance" class="tab">
     
-    <h1 id="tulong-form-title">Ofw Tulong</h1>
-    <h1 id="request-assist-title">Request Assistance Form</h1>
+    <div  id="tulong-form-title"><h1>Ofw Tulong</h1></div>
+    <div id="request-assist-title"><h1>Request Assistance Form</h1></div>
 
     <form action="{{ route('request.assistance.submit') }}" method="POST" enctype="multipart/form-data" id="tulong-form">
         @csrf
+        <div id="form-sub-con">
+
+
         <div class="con-input">
             <label for="first-name">First Name / Pangalan <span>*</span></label><br>
             <input type="text" name="first-name" id="first-name" required>
@@ -108,5 +111,8 @@
             <textarea name="complaint" placeholder="Leave your complaints here..." id="complaint-mes" ></textarea><br>           
         </div> <br>
         <div><button type="submit" id="req-sub-btn">Submit</button></div>
+
+
+        </div>
     </form>
 </section>
