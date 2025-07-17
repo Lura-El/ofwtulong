@@ -26,6 +26,8 @@ Route::post('/contact-us', [ContactUsController::class, 'submit'])->name('contac
 Route::post('/membership', [MembershipController::class, 'submit'])->name('membership.submit');
 Route::post('/request-assistance', [RequestAssistanceController::class, 'submit'])->name('request.assistance.submit');
 
+Route::get('/admin/contact-fetch', [ContactUsController::class, 'fetch'])->name('contact.fetch');
+
 // Admin Login Routes
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login.form');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
