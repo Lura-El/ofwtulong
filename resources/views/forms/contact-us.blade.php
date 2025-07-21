@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}"/>
+    <title>OFW Tulong</title>
+</head>
+<body>
+
 <div id="contact-us" class="tab">
             <div id="contact-us-title"><h1 >Contact Us</h1></div>
             <div id="contact-sub-con">
@@ -37,7 +47,7 @@
                     <p id="responseMsg" class="mt-4 text-center font-semibold"></p>
                 </div>
             </div>
-</div>
+    </div>
 
 
 <script>
@@ -93,5 +103,8 @@
         });
     });
 </script>
+
+</body>
+</html>
 
 

@@ -7,6 +7,9 @@ use App\Models\Membership;
 
 class MembershipController extends Controller
 {
+    public function index(){
+        return view('forms.membership');
+    }
     public function submit(Request $request)
     {
         $validatedData = $request->validate([

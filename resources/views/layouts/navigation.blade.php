@@ -1,29 +1,14 @@
-<nav>
-        <ul id="main-nav">
-            <li><button  class="button active" data-target="#home" >Home</button></li>
-            <li><button  class="button" data-target="#legal">Legal Assistance</button></li>
-            <li><button  class="button" data-target="#scholarship">Scholarship</button></li>
-            <li><button  class="button" data-target="#housing">Housing</button></li>
-            <li><button  class="button" data-target="#prison">Prison Monitoring</button></li>
-            <li><button  class="button" data-target="#livelihood">Livelihood Programs</button></li>
-            <li class="dropdown1"> 
-                <button class="helpdesk-btn">Help desk</button>
-                <ul id="sub-nav1">
-                    <li><button data-target="#contact-us" class="button">Contact Us</button></li>
-                    <li><button data-target="#membership" class="button">Membership</button></li>
-                    <li><button data-target="#request-assistance" class="button">Request Assistance</button></li>
-                </ul>
-            </li>
-            <li class="dropdown2">
-                <button class="others-btn">Others</button>
-                <ul id="sub-nav2">
-                    <li><button data-target="#health" class="button">Mental Health</button></li>
-                    <li><button data-target="#reunification" class="button">Family Reunification</button></li>
-                    <li><button data-target="#skills" class="button">Skill Development</button></li>
-                    <li><button data-target="#health-service" class="button">Health Service</button></li>
-                    <li><button data-target="#awareness" class="button">Community Awareness</button></li>
-                    <li><button data-target="#support" class="button">Family Support</button></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-lg-5 pt-4 pb-4">
+        <a class="navbar-brand" href="#!">OFW Tulong</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('contact-us')}}">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('membership')}}">Membership</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('request-assistance')}}">Request Assistance</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/forms.css') }}"/>
+    <title>OFW Tulong</title>
+</head>
+<body>
 <section id="membership" class="tab">
     <h1 id="membership-title">Membership</h1>
     <form action="{{ route('membership.submit') }}" method="POST" id="membership-form">
@@ -126,3 +135,6 @@
         <div id="membership-btn"><button type="submit">Submit</button></div>
     </form>
 </section>
+
+</body>
+</html>

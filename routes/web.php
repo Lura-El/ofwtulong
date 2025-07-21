@@ -23,8 +23,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::post('/contact-us', [ContactUsController::class, 'submit'])->name('contact.submit');
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
 Route::post('/membership', [MembershipController::class, 'submit'])->name('membership.submit');
+Route::get('/membership', [MembershipController::class, 'index'])->name('membership');
 Route::post('/request-assistance', [RequestAssistanceController::class, 'submit'])->name('request.assistance.submit');
+Route::get('/request-assistance', [RequestAssistanceController::class, 'index'])->name('request.assistance');
 
 Route::get('/admin/contact-fetch', [ContactUsController::class, 'fetch'])->name('contact.fetch');
 
@@ -41,6 +44,8 @@ Route::middleware('admin.auth')->group(function () {
     Route::get('/admin/request-assistance', fn () => view('admin.request-assistance'))->name('admin.request');
     Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 });
+
+
 
 
 require __DIR__.'/auth.php';

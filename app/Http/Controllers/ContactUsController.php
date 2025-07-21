@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Validator;
 
 class ContactUsController extends Controller
 {
+    public function index(){
+        return view('forms.contact-us');
+    }
     public function submit(Request $request)
     {
         $validator = Validator::make($request->all(),[
