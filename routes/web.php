@@ -6,15 +6,11 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\MembershipController;
 use App\Http\Controllers\RequestAssistanceController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 
+Route::get('/', fn () => view('welcome'));
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', fn () => view('dashboard'))->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -27,20 +23,20 @@ Route::post('/membership', [MembershipController::class, 'submit'])->name('membe
 Route::post('/request-assistance', [RequestAssistanceController::class, 'submit'])->name('request.assistance.submit');
 
 Route::get('/admin/contact-fetch', [ContactUsController::class, 'fetch'])->name('contact.fetch');
+Route::get('/admin/membership/json', [MembershipController::class, 'fetchMembers']);
+Route::get('/admin/request-assistance/json', [RequestAssistanceController::class, 'json']);
 
-// Admin Login Routes
+// Admin login/logout
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login.form');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login');
 Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
-// Admin Routes
+// Admin dashboard and pages
 Route::middleware('admin.auth')->group(function () {
-    Route::get('/admin/dashboard', fn () => view('admin.dashboard'))->name('admin.dashboard');
+    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/admin/contact-us', fn () => view('admin.contact-us'))->name('admin.contact');
-    Route::get('/admin/membership', fn () => view('admin.membership'))->name('admin.membership');
-    Route::get('/admin/request-assistance', fn () => view('admin.request-assistance'))->name('admin.request');
-    Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+    Route::get('/admin/membership', [MembershipController::class, 'index'])->name('admin.membership');
+    Route::get('/admin/request-assistance', [RequestAssistanceController::class, 'adminIndex'])->name('admin.request');
 });
-
 
 require __DIR__.'/auth.php';

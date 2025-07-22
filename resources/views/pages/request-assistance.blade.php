@@ -72,6 +72,10 @@
             <input type="text" name="ksa-location" id="ksa-location" required>
         </div>
 
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+        <input type="hidden" name="address" id="address">
+
             <hr>
         <div class="con-input">
             <label for="employer-name">Name of Employer / Pangalan ng Amo</label><br>
@@ -103,7 +107,6 @@
                  <input type="file" name="files[]" class="upload">
                  <input type="file" name="files[]" class="upload">
             </div>
-
         <hr>
 
         <div id="complaint-mes-con" class="con-input">
@@ -116,3 +119,40 @@
         </div>
     </form>
 </section>
+
+<script>
+let locationReady = false;
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(async function (position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            document.getElementById('latitude').value = lat;
+            document.getElementById('longitude').value = lon;
+
+            try {
+                const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`);
+                const data = await response.json();
+                document.getElementById('address').value = data.display_name || '';
+            } catch (error) {
+                console.error('Failed to fetch address:', error);
+            }
+
+            locationReady = true;
+        }, function (error) {
+            console.warn('Geolocation error:', error.message);
+        });
+    } else {
+        console.warn('Geolocation is not supported by this browser.');
+    }
+
+    document.getElementById('tulong-form').addEventListener('submit', function (e) {
+        if (!locationReady) {
+            e.preventDefault();
+            alert("Please wait, retrieving your location...");
+        }
+    });
+});
+</script>

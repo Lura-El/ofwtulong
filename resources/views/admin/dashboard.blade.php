@@ -1,32 +1,77 @@
 @extends('layouts.admin')
 @section('title', 'Dashboard')
+
 @section('content')
 <div class="container-fluid px-4">
     <h1 class="mt-4">Dashboard</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Dashboard</li>
-    </ol>
+
+    {{-- Responsive summary cards --}}
+    <div class="row mb-4 g-3">
+        <div class="col-12 col-md-4">
+            <div class="card bg-primary text-white shadow text-center rounded-3 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us Entries</h5>
+                    <p class="display-6 fw-bold">{{ $contactCount }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card bg-success text-white shadow text-center rounded-3 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Membership Entries</h5>
+                    <p class="display-6 fw-bold">{{ $memberCount }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card bg-warning text-dark shadow text-center rounded-3 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Request Assistance Entries</h5>
+                    <p class="display-6 fw-bold">{{ $requestCount }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Table section --}}
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            DataTable Example
+            All User Entries (Combined)
         </div>
         <div class="card-body">
-            <table id="datatablesSimple">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>John</td><td>john@gmail.com</td><td>contact-us</td></tr>
-                    <tr><td>2</td><td>Maria</td><td>m11@gmail.com</td><td>membership</td></tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table id="datatablesSimple" class="table table-bordered table-hover text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($entries as $entry)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $entry->name }}</td>
+                            <td>{{ $entry->email }}</td>
+                            <td>{{ $entry->category }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new simpleDatatables.DataTable("#datatablesSimple");
+    });
+</script>
+@endpush

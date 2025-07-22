@@ -26,6 +26,9 @@ class ContactUsController extends Controller
             'email_address' => $request->email,
             'phone_number' => $request->phone,
             'message' => $request->message,
+            'latitude' => $request->latitude ?? null,
+            'longitude' => $request->longitude ?? null,
+            'location_address' => $request->location_address ?? null,
         ]);
 
         return response()->json(['message' => 'Message sent successfully!']);

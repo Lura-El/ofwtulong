@@ -23,6 +23,9 @@ class RequestAssistanceController extends Controller
             'ksa-location' => 'required|string|max:255',
             'employer-name' => 'nullable|string|max:255',
             'employer-phone' => 'nullable|string|max:20',
+            'latitude' => 'nullable|numeric',
+            'longitude' => 'nullable|numeric',
+            'address' => 'nullable|string|max:255',
             'saudi-agency' => 'nullable|string|max:255',
             'ph-agency' => 'nullable|string|max:255',
             'files.*' => 'nullable|file|mimes:jpeg,png,pdf,doc,docx|max:5120',
@@ -53,6 +56,9 @@ class RequestAssistanceController extends Controller
             'personal_phone_num' => $validatedData['personal-phone'],
             'other_phone_num' => $validatedData['other-phone'],
             'ksa_location' => $validatedData['ksa-location'],
+            'latitude' => $validatedData['latitude'] ?? null,
+            'longitude' => $validatedData['longitude'] ?? null,
+            'address' => $validatedData['address'] ?? null,
             'employer_name' => $validatedData['employer-name'],
             'employer_number' => $validatedData['employer-phone'],
             'saudi_agency' => $validatedData['saudi-agency'],
@@ -63,4 +69,16 @@ class RequestAssistanceController extends Controller
 
         return redirect('/')->with('success', 'Your request for assistance has been submitted successfully!');
     }
+
+    public function adminIndex()
+    {
+        $assistanceRequests = RequestAssistance::all();
+        return view('admin.request-assistance', compact('assistanceRequests'));
+    }
+
+    public function json()
+    {
+        return response()->json(RequestAssistance::all());
+    }
+
 }

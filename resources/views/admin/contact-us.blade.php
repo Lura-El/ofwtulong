@@ -11,54 +11,75 @@
             Contact Messages
         </div>
         <div class="card-body">
-            <table id="datatablesSimple">
-                <thead>
-                    <tr>
-                        <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Messages</th>
-                    </tr>
-                </thead>
-                <tbody id="contact-table-body"></tbody>
-            </table>
+            <div class="table-responsive">
+                <div id="table-container">
+                </div>
+            </div>
         </div>
     </div>
 </div>
 @endsection
 
 @push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"></script>
+
 <script>
+    let dataTableInstance;
+
     document.addEventListener('DOMContentLoaded', function () {
-        const tbody = document.getElementById("contact-table-body");
+        const tableContainer = document.getElementById("table-container");
+
+        function renderTable(data) {
+            let tableHtml = `
+                <table id="datatablesSimple" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Messages</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            data.forEach(row => {
+                tableHtml += `
+                    <tr>
+                        <td>${row.id}</td>
+                        <td>${row.name}</td>
+                        <td>${row.email_address}</td>
+                        <td>${row.phone_number}</td>
+                        <td>${row.message}</td>
+                        <td>${row.location_address}</td>
+                    </tr>
+                `;
+            });
+
+            tableHtml += `
+                    </tbody>
+                </table>
+            `;
+
+            tableContainer.innerHTML = tableHtml;
+
+            dataTableInstance = new simpleDatatables.DataTable("#datatablesSimple");
+        }
 
         function fetchContacts() {
             fetch("{{ route('contact.fetch') }}")
                 .then(res => res.json())
                 .then(data => {
-                    tbody.innerHTML = "";
-                    data.forEach(row => {
-                        tbody.innerHTML += `
-                            <tr>
-                                <td>${row.id}</td>
-                                <td>${row.name}</td>
-                                <td>${row.email_address}</td>
-                                <td>${row.phone_number}</td>
-                                <td>${row.message}</td>
-                            </tr>
-                        `;
-                    });
+                    renderTable(data);
                 })
                 .catch(err => {
                     console.error("Failed to fetch contact messages", err);
                 });
         }
 
-        if (!tbody) {
-            console.error("Element #contact-table-body not found");
-            return;
-        }
-
         fetchContacts();
-
-        setInterval(fetchContacts, 5000);
     });
 </script>
 @endpush

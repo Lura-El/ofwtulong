@@ -35,7 +35,17 @@ class MembershipController extends Controller
             'kin-email' => 'required|email|max:255',
         ]);
 
-        Membership::create([
+        $exits = Membership::where('passport_num', $validatedData['passport-num'])
+            ->orWhere('email_address', $validatedData['email'])
+            ->orWhere('mobile_num', $validatedData['mphone'])
+            ->exists();
+        
+        if ($exits) {
+            return redirect()->back()->withErrors(['error' => 'Membership with this passport number, email, or mobile number already exists.']);
+        }
+
+        try {
+            Membership::create([
             'full_name' => $validatedData['fname'],
             'passport_num' => $validatedData['passport-num'],
             'email_address' => $validatedData['email'],
@@ -61,6 +71,24 @@ class MembershipController extends Controller
             'relative_email_add' => $validatedData['kin-email'],
         ]);
 
-        return redirect('/')->with('success', 'Your membership application has been submitted successfully!');
+        return redirect()->back()->with('success', 'Membership application submitted successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => 'Failed to submit membership application. Please try again later.']);
+
+        }
+    
     }
+
+    public function index()
+    {
+        $members = Membership::latest()->get();
+
+        return view('admin.membership', compact('members'));
+    }
+
+    public function fetchMembers()
+    {
+        return response()->json(Membership::latest()->get());
+    }
+
 }
