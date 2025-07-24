@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\MembershipController;
@@ -10,13 +9,9 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', fn () => view('welcome'));
 
-Route::get('/dashboard', fn () => view('dashboard'))->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+Route::get('/contact-us', function () { return view('pages.contact-us');})->name('contact');
+Route::get('/membership', function () { return view('pages.membership');})->name('membership');
+Route::get('/request-assistance', function () { return view('pages.request-assistance');})->name('request.assistance');
 
 Route::post('/contact-us', [ContactUsController::class, 'submit'])->name('contact.submit');
 Route::post('/membership', [MembershipController::class, 'submit'])->name('membership.submit');
@@ -25,6 +20,7 @@ Route::post('/request-assistance', [RequestAssistanceController::class, 'submit'
 Route::get('/admin/contact-fetch', [ContactUsController::class, 'fetch'])->name('contact.fetch');
 Route::get('/admin/membership/json', [MembershipController::class, 'fetchMembers']);
 Route::get('/admin/request-assistance/json', [RequestAssistanceController::class, 'json']);
+Route::get('/admin/dashboard/json', [DashboardController::class, 'fetchLiveData'])->middleware('admin.auth')->name('admin.dashboard.json');
 
 // Admin login/logout
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login.form');
