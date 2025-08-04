@@ -45,13 +45,13 @@ class MembershipController extends Controller
         return redirect()->back()->with('success', 'Membership submitted successfully.');
     }
 
-    public function index()
-    {
-        return view('admin.membership');
-    }
+    // public function index()
+    // {
+    //     return view('admin.membership');
+    // }
 
-    public function fetchMembers()
-    {
-        return response()->json(Membership::latest()->get());
-    }
+    // public function fetchMembers()
+    // {
+    //     return response()->json(Membership::latest()->get());
+    // }
 }

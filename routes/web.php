@@ -9,9 +9,9 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', fn () => view('welcome'));
 
-Route::get('/contact-us', function () { return view('pages.contact-us');})->name('contact');
-Route::get('/membership', function () { return view('pages.membership');})->name('membership');
-Route::get('/request-assistance', function () { return view('pages.request-assistance');})->name('request.assistance');
+Route::get('/contact-us', function () { return view('forms.contact-us');})->name('contact');
+Route::get('/membership', function () { return view('forms.membership');})->name('membership');
+Route::get('/request-assistance', function () { return view('forms.request-assistance');})->name('request.assistance');
 
 Route::post('/contact-us', [ContactUsController::class, 'submit'])->name('contact.submit');
 Route::post('/membership', [MembershipController::class, 'submit'])->name('membership.submit');
