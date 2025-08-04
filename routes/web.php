@@ -31,7 +31,7 @@ Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.lo
 Route::middleware('admin.auth')->group(function () {
     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/admin/contact-us', fn () => view('admin.contact-us'))->name('admin.contact');
-    Route::get('/admin/membership', [MembershipController::class, 'index'])->name('admin.membership');
+    Route::get('/admin/membership', [MembershipController::class, 'viewAdmin'])->name('admin.membership');
     Route::get('/admin/request-assistance', [RequestAssistanceController::class, 'adminIndex'])->name('admin.request');
 });
 
