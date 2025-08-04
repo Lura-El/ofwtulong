@@ -7,6 +7,9 @@ use App\Models\RequestAssistance;
 
 class RequestAssistanceController extends Controller
 {
+    public function index(){
+        return view('forms.request-assistance');
+    }
     public function submit(Request $request)
     {
         $validatedData = $request->validate([

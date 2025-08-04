@@ -26,10 +26,13 @@
                 <li><a href="#services" class="hover:text-blue-500">Legal Assistance</a></li>
                 <li><a href="#services" class="hover:text-blue-500">Livelihood Programs</a></li>
                 <li><a href="#services" class="hover:text-blue-500">Prison Monitoring</a></li>
-                <li><a href="#services" class="hover:text-blue-500">Family Reunification</a></li>
+                <li><a href="#services" class="hover:text-blue-500">Family Reunification Programs</a></li>
                 <li><a href="#services" class="hover:text-blue-500">Scholarship Program</a></li>
                 <li><a href="#services" class="hover:text-blue-500">Skills Development</a></li>
                 <li><a href="#services" class="hover:text-blue-500">Family Support</a></li>
+                <li><a href="#services" class="hover:text-blue-500">Mental Health and Wellness Support</a></li>
+                <li><a href="#services" class="hover:text-blue-500">Health Services Access</a></li>
+                <li><a href="#services" class="hover:text-blue-500">Community Awareness and Advocacy</a></li><br>
             </ul>
         </div>
 

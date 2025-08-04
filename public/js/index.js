@@ -1,29 +1,13 @@
-$(document).ready(function() {
-    $('.tab').hide();
-    $('#home').show();
-    
-    $('.button').on('click', function() {
-        $('.button').removeClass('active'); 
-        $(this).addClass('active');
-        
-        $('.tab').hide(); 
-        
-        let targetTab = $(this).data('target');
-        $(targetTab).show();
-    });
+/*!
+* Start Bootstrap - Heroic Features v5.0.6 (https://startbootstrap.com/template/heroic-features)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-heroic-features/blob/master/LICENSE)
+*/
+// This file is intentionally blank
+// Use this file to add JavaScript to your project
 
-    $('.container').on('click', function (e) {
-        e.stopPropagation();
-        $(this).addClass('active').hide();
-        $('#main-nav').show();
 
-        if($('.container').hasClass('active')){
-            $(document).on('click', function (e) {
-                if (!$(e.target).closest('.container, #main-nav').length) {
-                    $('#main-nav').hide();
-                    $('.container').show().removeClass('active');
-                }
-            });
-        }
-    });
+document.querySelector('#plus').addEventListener('click', function () {
+    const otherService = document.getElementById('otherservice');
+    otherService.classList.toggle('d-none');
 });

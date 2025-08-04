@@ -1,8 +1,9 @@
-<nav class="bg-primary text-white shadow sticky top-0 z-50 font-body">
+<nav class="text-black  top-0 z-50 font-body pt-4">
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="text-xl font-heading font-bold tracking-wide">
-        OFW TULONG
+      {{-- OFW TULONG  --}}
       </div>
 
       <div class="md:hidden">
@@ -16,18 +17,18 @@
       </div>
 
       <div id="nav-menu" class="hidden md:flex space-x-6 items-center font-medium">
-        <button data-target="#home" class="hover:text-support">Home</button>
-        <button data-target="#about" class="hover:text-support">About</button>
-        <button data-target="#services" class="hover:text-support">Services</button>
+        <button data-target="#home" class="hover:text-red-900">Home</button>
+        <button data-target="#about" class="hover:text-red-900">About</button>
+        <button data-target="#services" class="hover:text-red-900">Services</button>
 
         <!-- Help Centre Dropdown -->
         <div class="relative group">
-          <button class="hover:text-support">Help Centre</button>
-          <div class="absolute hidden group-hover:block bg-white text-primary rounded shadow-lg mt-2 z-10">
+          <button class="hover:text-red-900">Help Centre</button>
+          <div class="absolute hidden group-hover:block bg-white text-black rounded shadow-lg z-10">
             <ul class="py-2 px-4 space-y-1 text-sm">
-              <li><a href="{{ route('contact') }}"><button class="w-full text-left hover:text-accent">Contact Us</button></a></li>
-              <li><a href="{{ route('membership') }}"><button class="w-full text-left hover:text-accent">Membership</button></a></li>
-              <li><a href="{{ route('request.assistance') }}"><button class="w-full text-left hover:text-accent">Request Assistance</button></a></li>
+              <li><a href="{{ route('contact') }}"><button class="w-full text-left hover:text-red-900">Contact Us</button></a></li>
+              <li><a href="{{ route('membership') }}"><button class="w-full text-left hover:text-red-900">Membership</button></a></li>
+              <li><a href="{{ route('request.assistance') }}"><button class="w-full text-left hover:text-900">Request Assistance</button></a></li>
             </ul>
           </div>
         </div>
@@ -35,7 +36,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-white font-medium">
+    <div id="mobile-menu" class="md:hidden hidden space-y-2 text-red-900 font-medium">
       <button data-target="#home" class="block">Home</button>
       <button data-target="#about" class="block">About</button>
       <button data-target="#services" class="block">Services</button>

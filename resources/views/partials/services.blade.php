@@ -19,43 +19,69 @@
     const services = [
         {
         title: 'Housing Initiatives for Inmates Families',
-        desc: 'Tinutulungan namin ang mga pamilya ng OFWs na nasa kulungan upang magkaroon ng maayos at ligtas na tirahan. Kasama rito ang koordinasyon sa mga lokal na pamahalaan para sa pabahay. Layunin naming mabigyan sila ng panibagong simula.',
-        image: '/images/housing.jpg'
+        desc: 'Pagsuporta sa mga pamilya ng nakakulong sa pamamagitan ng pabahay o shelter programs upang masigurong may maayos silang tirahan habang naghihintay ng paglaya ng kanilang mga mahal sa buhay.',
+        image: '/images/home.png',
+        attribute: 'Home icons made by Iconixar from www.flaticon.com'
         },
         {
         title: 'Legal Assistance and Psychosocial Support',
-        desc: 'Nagbibigay kami ng libreng legal na tulong at counseling para sa mga OFW na may kinahaharap na kaso o emosyonal na suliranin. May mga abogado at psychologist kaming katuwang. Layunin naming mapanatili ang kanilang karapatan at kalusugang mental.',
-        image: '/images/legal.jpg'
+        desc: 'Pagbibigay ng legal assistance at psychosocial support para sa mga nakakulong upang mapabuti ang kanilang kalagayan at mapabilis ang proseso ng kanilang kaso.',
+        image: '/images/aid.png',
+        attribute: 'Legal icons made by HAJICON from www.flaticon.com'
         },
         {
         title: 'Livelihood Programs',
-        desc: 'Nag-aalok kami ng pagsasanay sa mga pamilya ng OFWs upang magkaroon sila ng sariling kabuhayan. Mula sa handicrafts hanggang sa online selling, sinusuportahan namin sila. Sa ganitong paraan, may pagkakakitaan sila kahit malayo ang mahal sa buhay.',
-        image: '/images/livelihood.jpg'
+        desc: 'Pagsasanay at pagbigay ng livelihood opportunities para sa mga nakakulong at kanilang pamilya upang sila ay magkaroon ng hanapbuhay at mapabuti ang kanilang ekonomiya.',
+        image: '/images/team.png',
+        attribute: 'Work icons made by Eucalyp from www.flaticon.com'
         },
         {
         title: 'Prison Monitoring Services',
-        desc: 'Minomonitor namin ang kalagayan ng mga OFW na nakakulong sa ibang bansa. Tinitiyak namin na maayos ang kanilang kalagayan at hindi naaabuso. Nakikipag-ugnayan kami sa embahada at ibang ahensya para dito.',
-        image: '/images/prison.jpg'
+        desc: 'Regular na pag-monitor sa kalagayan ng nakakulong, kabilang ang kanilang kalusugan at kalagayan sa loob ng bilangguan upang matiyak ang kanilang karapatan at kapakanan.',
+        image: '/images/captive.png',
+        attribute: 'Captive icons made by Leremy from www.flaticon.com'
         },
         {
-        title: 'Family Reunification',
-        desc: 'Tumutulong kami sa mga OFW na makauwi sa kanilang pamilya o madala ang pamilya sa kanilang kinaroroonan. Inaayos namin ang dokumento at proseso. Mahalaga sa amin ang pagkakabuo ng pamilya.',
-        image: '/images/reunification.jpg'
+        title: 'Family Reunification Programs',
+        desc: 'Mga aktibidad o programa na naglalayong pag-ibayuhin ang komunikasyon at relasyon ng nakakulong sa kanilang pamilya, gaya ng family visits at group counseling.',
+        image: '/images/family.png',
+        attribute: 'Family icons made by Good Ware from www.flaticon.com'
         },
         {
         title: 'Scholarship Program for Children Inmates',
-        desc: 'Nagbibigay kami ng tulong pinansyal sa mga anak ng OFW na may kasong kinakaharap. Nais naming ipagpatuloy nila ang kanilang edukasyon. Isang hakbang ito tungo sa mas magandang kinabukasan.',
-        image: '/images/scholar.jpg'
+        desc: 'Paglalaan ng educational scholarships upang matulungan ang mga anak ng nakakulong na makapag-aral at magkaroon ng magandang kinabukasan.',
+        image: '/images/mortarboard.png',
+        attribute: 'Scholarship icons made by Bartama Graphic from www.flaticon.com'
         },
         {
         title: 'Skills Development and Vocational Training',
-        desc: 'Nagbibigay kami ng TESDA-accredited training para sa mga nais matuto ng bagong kasanayan. Ito ay libre at bukas para sa lahat ng kaanak ng OFWs. Layunin naming mapaunlad ang kanilang kabuhayan.',
-        image: '/images/skills.jpg'
+        desc: 'Pagsasanay sa mga praktikal na skills na pwedeng gamitin pagkatapos ng kanilang pagkakakulong, para mas mapadali ang reintegration sa lipunan.',
+        image: '/images/teaching.png',
+        attribute: 'Presentation icons made by Alkhalifi design from www.flaticon.com'
         },
         {
         title: 'Support for Families of Deceased Inmates',
-        desc: 'Nagbibigay kami ng tulong pinansyal at emosyonal sa mga naiwan ng OFW na pumanaw sa ibang bansa. Tinutulungan din namin sa pagproseso ng dokumento. Layunin naming hindi sila maiwan sa gitna ng trahedya.',
-        image: '/images/support.jpg'
+        desc: 'Assistance programs para sa mga pamilya na naulila dahil sa pagkawala ng nakakulong, kabilang na ang legal at psychosocial support.',
+        image: '/images/social-justice.png',
+        attribute: 'Human rights icons made by Freepik from www.flaticon.com'
+        },
+        {
+        title: 'Mental Health and Wellness Support',
+        desc: 'Regular counseling sessions at mental health workshops para sa nakakulong at kanilang pamilya upang matulungan silang harapin ang stress, trauma, at iba pang emotional challenges.',
+        image: '/images/services.png',
+        attribute: 'Health icons made by gravisio from www.flaticon.com'
+        },
+        {
+        title: 'Health Services Access',
+        desc: 'Pagbibigay ng access sa regular health check-ups, dental care, at iba pang medical services para sa nakakulong at kanilang pamilya.',
+        image: '/images/protection.png',
+        attribute: 'Healthcare icons made by Kalashnyk design from www.flaticon.com'
+        },
+        {
+        title: 'Community Awareness and Advocacy',
+        desc: 'Kampanya para mapabuti ang pananaw ng komunidad tungkol sa mga nakakulong at kanilang pamilya, at para mabawasan ang stigma at diskriminasyon.',
+        image: '/images/community-approach.png',
+        attribute: 'Online community icons made by kostop from www.flaticon.com'
         }
     ];
 
@@ -71,7 +97,7 @@
         card.className = 'bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center';
         card.setAttribute('data-aos', 'fade-up');
         card.innerHTML = `
-        <img src="${service.image}" alt="${service.title}" class="w-full h-[250px] object-cover rounded mb-4">
+        <img src="${service.image}" alt="${service.title}" title="${service.attribute}" class="w-[256px] h-[256px] object-cover rounded mb-4 mx-auto">
         <h3 class="text-lg font-semibold text-[#4682A9] mb-2">${service.title}</h3>
         <p class="text-gray-700 text-sm">${service.desc}</p>
         `;
