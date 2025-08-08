@@ -54,7 +54,7 @@
 
     {{-- Submit Section --}}
     <div class="pt-4 flex flex-col items-center gap-2">
-        <button id="submitBtn" type="submit" class="w-full md:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-800 transition font-semibold">
+        <button id="submitBtn" type="submit"  class="w-auto bg-[#FEC601] hover:bg-[#FFD84D] text-[#0B1D2A] font-semibold py-2 px-4 rounded-md shadow-sm transition duration-300">
             Submit
         </button>
 

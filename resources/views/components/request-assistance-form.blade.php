@@ -47,7 +47,7 @@
     <label class="block text-gray-700 font-medium mb-2">Upload Proofs</label>
     <div class="grid md:grid-cols-3 gap-4 text-sm">
       @for ($i = 0; $i < 3; $i++)
-        <input type="file" name="files[]" class="block text-gray-700 file:text-bg file:border file:rounded file:px-4 file:py-2 file:bg-gray-800" />
+        <input type="file" name="files[]" class="block text-gray-700 file:text-white file:border file:rounded file:px-4 file:py-2 file:bg-gray-800" />
       @endfor
     </div>
   </div>
@@ -57,7 +57,7 @@
     <textarea name="complaint" required class="w-full border font-medium text-sm text-gray-800 rounded px-3 py-2 min-h-[100px]" placeholder="Leave your complaints here..."></textarea>
   </div>
 
-  <div class="text-right">
-    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-semibold">Submit</button>
+  <div class="text-center">
+    <button type="submit" class="bg-[#FEC601] hover:bg-[#FFD84D] text-[#0B1D2A] font-semibold py-2 px-4 rounded-md shadow-sm transition duration-300">Submit</button>
   </div>
 </form>

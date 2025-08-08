@@ -1,92 +1,129 @@
-<section id="services" class="scroll-mt-8 bg-bg py-20">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-[#4682A9] mb-4 text-center" data-aos="fade-up">Our Services</h2>
-        <p class="text-gray-700 text-center mb-12 max-w-2xl mx-auto text-sm" data-aos="fade-up">
-        Thus declared, we are dedicated and devoted to provide assistance, guidance, essential support and protection to OFWs and their family members elsewhere in the world.
-        </p>
+<!-- Services Section -->
+<section id="services" class="bg-[#0B1D2A] py-20 font-body">
+  <div class="max-w-7xl mx-auto px-4">
 
-        <div id="serviceCards" class="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-10"></div>
+    <!-- Header -->
+    <h2 class="text-3xl text-center font-heading font-bold text-[#FEC601] relative pb-3" data-aos="fade-down">
+      Our services
+      <span class="absolute left-1/2 -bottom-1 w-20 h-1 bg-[#F9FAFB] -translate-x-1/2 rounded-full"></span>
+    </h2>
+    <p class="text-[#F9FAFB] text-center  mb-12 max-w-2xl mx-auto text-base leading-relaxed mt-6" data-aos="fade-up" data-aos-delay="100">
+      We are committed to providing vital assistance, advocacy, and support to OFWs and their loved ones around the world.
+    </p>
 
-        <div class="text-center">
-            <button id="seeAllBtn" class="bg-primary text-bg px-10  py-4 rounded-full font-medium hover:bg-accent transition">
-                See All
-            </button>
-        </div>
+    <!-- Cards Grid -->
+    <div id="serviceCards" class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12"></div>
+
+    <!-- Button -->
+    <div class="text-center" data-aos="zoom-in-up" data-aos-delay="200">
+      <button id="seeAllBtn"
+        class="bg-[#FEC601] text-[#0B1D2A] px-8 py-3 rounded-full font-medium hover:bg-[#3ABEF9] hover:text-white transition duration-300">
+        See All
+      </button>
     </div>
+  </div>
 </section>
 
+<script src="https://unpkg.com/lucide@latest"></script>
+
 <script>
-    const services = [
-        {
-        title: 'Housing Initiatives for Inmates Families',
-        desc: 'Tinutulungan namin ang mga pamilya ng OFWs na nasa kulungan upang magkaroon ng maayos at ligtas na tirahan. Kasama rito ang koordinasyon sa mga lokal na pamahalaan para sa pabahay. Layunin naming mabigyan sila ng panibagong simula.',
-        image: '/images/housing.jpg'
-        },
-        {
-        title: 'Legal Assistance and Psychosocial Support',
-        desc: 'Nagbibigay kami ng libreng legal na tulong at counseling para sa mga OFW na may kinahaharap na kaso o emosyonal na suliranin. May mga abogado at psychologist kaming katuwang. Layunin naming mapanatili ang kanilang karapatan at kalusugang mental.',
-        image: '/images/legal.jpg'
-        },
-        {
-        title: 'Livelihood Programs',
-        desc: 'Nag-aalok kami ng pagsasanay sa mga pamilya ng OFWs upang magkaroon sila ng sariling kabuhayan. Mula sa handicrafts hanggang sa online selling, sinusuportahan namin sila. Sa ganitong paraan, may pagkakakitaan sila kahit malayo ang mahal sa buhay.',
-        image: '/images/livelihood.jpg'
-        },
-        {
-        title: 'Prison Monitoring Services',
-        desc: 'Minomonitor namin ang kalagayan ng mga OFW na nakakulong sa ibang bansa. Tinitiyak namin na maayos ang kanilang kalagayan at hindi naaabuso. Nakikipag-ugnayan kami sa embahada at ibang ahensya para dito.',
-        image: '/images/prison.jpg'
-        },
-        {
-        title: 'Family Reunification',
-        desc: 'Tumutulong kami sa mga OFW na makauwi sa kanilang pamilya o madala ang pamilya sa kanilang kinaroroonan. Inaayos namin ang dokumento at proseso. Mahalaga sa amin ang pagkakabuo ng pamilya.',
-        image: '/images/reunification.jpg'
-        },
-        {
-        title: 'Scholarship Program for Children Inmates',
-        desc: 'Nagbibigay kami ng tulong pinansyal sa mga anak ng OFW na may kasong kinakaharap. Nais naming ipagpatuloy nila ang kanilang edukasyon. Isang hakbang ito tungo sa mas magandang kinabukasan.',
-        image: '/images/scholar.jpg'
-        },
-        {
-        title: 'Skills Development and Vocational Training',
-        desc: 'Nagbibigay kami ng TESDA-accredited training para sa mga nais matuto ng bagong kasanayan. Ito ay libre at bukas para sa lahat ng kaanak ng OFWs. Layunin naming mapaunlad ang kanilang kabuhayan.',
-        image: '/images/skills.jpg'
-        },
-        {
-        title: 'Support for Families of Deceased Inmates',
-        desc: 'Nagbibigay kami ng tulong pinansyal at emosyonal sa mga naiwan ng OFW na pumanaw sa ibang bansa. Tinutulungan din namin sa pagproseso ng dokumento. Layunin naming hindi sila maiwan sa gitna ng trahedya.',
-        image: '/images/support.jpg'
-        }
-    ];
+  const services = [{
+      title: 'Housing Assistance',
+      desc: 'Tinutulungan ang mga pamilya ng OFWs na nakakulong upang makahanap ng ligtas at maayos na tirahan.',
+      icon: 'home',
+      bg: '/images/housing.jpg'
+    },
+    {
+      title: 'Legal & Psychosocial Aid',
+      desc: 'Libreng legal at emosyonal na suporta para sa mga OFWs at kanilang pamilya sa panahon ng krisis.',
+      icon: 'gavel',
+      bg: '/images/legal.jpg'
+    },
+    {
+      title: 'Livelihood Training',
+      desc: 'Pagsasanay sa kabuhayan upang bigyan ng oportunidad ang mga pamilya ng OFWs na magkaroon ng sariling kita.',
+      icon: 'briefcase',
+      bg: '/images/livelihood.jpg'
+    },
+    {
+      title: 'Prison Monitoring',
+      desc: 'Pagsubaybay sa kalagayan ng mga nakakulong na OFWs para sa makatao at makatarungang pagtrato.',
+      icon: 'lock',
+      bg: '/images/prison.jpg'
+    },
+    {
+      title: 'Family Reunification',
+      desc: 'Pagtulong sa muling pagsasama-sama ng mga OFWs at kanilang mga mahal sa buhay.',
+      icon: 'users',
+      bg: '/images/reunification.jpg'
+    },
+    {
+      title: 'Scholarship Support',
+      desc: 'Pagbibigay ng mga iskolarship sa mga anak ng OFWs na nasa mahirap na kalagayan.',
+      icon: 'graduation-cap',
+      bg: '/images/scholar.jpg'
+    },
+    {
+      title: 'Skills Development',
+      desc: 'TESDA training programs para sa mga dependents ng OFWs upang sila ay makahanap ng hanapbuhay.',
+      icon: 'wrench',
+      bg: '/images/skills.jpg'
+    },
+    {
+      title: 'Support for Bereaved Families',
+      desc: 'Pagbibigay tulong-pinansyal at emosyonal sa mga pamilyang naiwan ng mga yumaong OFWs.',
+      icon: 'heart',
+      bg: '/images/support.jpg'
+    }
+  ];
 
-    let showingAll = false;
+  let showingAll = false;
 
-    function renderServices() {
+  function renderServices() {
     const container = document.getElementById('serviceCards');
     container.innerHTML = '';
-    const displayedServices = showingAll ? services : services.slice(0, 6);
+    const displayedServices = showingAll ? services : services.slice(0, 4);
 
-    displayedServices.forEach(service => {
-        const card = document.createElement('div');
-        card.className = 'bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center';
-        card.setAttribute('data-aos', 'fade-up');
-        card.innerHTML = `
-        <img src="${service.image}" alt="${service.title}" class="w-full h-[250px] object-cover rounded mb-4">
-        <h3 class="text-lg font-semibold text-[#4682A9] mb-2">${service.title}</h3>
-        <p class="text-gray-700 text-sm">${service.desc}</p>
-        `;
-        container.appendChild(card);
+    displayedServices.forEach((service, index) => {
+      const card = document.createElement('div');
+      card.className = `
+        group relative overflow-hidden rounded-2xl shadow-md transition-all duration-500 ease-in-out 
+        bg-cover bg-center text-white min-h-[320px] flex items-center justify-center
+      `;
+      card.style.backgroundImage = `url('${service.bg}')`;
+      card.setAttribute('data-aos', 'fade-up');
+      card.setAttribute('data-aos-delay', `${index * 100}`);
+
+      card.innerHTML = `
+        <!-- Overlay for White Card -->
+        <div class="absolute inset-0 bg-white/30 group-hover:bg-[#0B1D2A] transition-all duration-500 ease-in-out z-10 p-6 flex flex-col items-center justify-center text-center rounded-2xl">
+          <div class="flex justify-center items-center w-16 h-16 bg-[#FEC601]/20 rounded-full mb-4 group-hover:bg-[#FEC601] transition duration-300">
+            <i data-lucide="${service.icon}" class="w-8 h-8 text-[#FEC601] group-hover:text-white transition duration-300"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-semibold text-[#0B1D2A] group-hover:text-[#FEC601] mb-2 transition-all duration-300">
+            ${service.title}
+          </h3>
+          <p class="text-sm text-[#0B1D2A] group-hover:text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 mt-2 leading-relaxed">
+            ${service.desc}
+          </p>
+        </div>
+
+        <!-- Background image fades out -->
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/90 transition-all duration-500 ease-in-out z-0"></div>
+      `;
+
+      container.appendChild(card);
     });
 
+    lucide.createIcons();
     document.getElementById('seeAllBtn').textContent = showingAll ? 'Show Less' : 'See All';
+    AOS.refresh();
+  }
 
-    AOS.refresh(); 
-    }
+  document.getElementById('seeAllBtn').addEventListener('click', () => {
+    showingAll = !showingAll;
+    renderServices();
+  });
 
-    document.getElementById('seeAllBtn').addEventListener('click', () => {
-        showingAll = !showingAll;
-        renderServices();
-    });
-
-    document.addEventListener('DOMContentLoaded', renderServices);
+  document.addEventListener('DOMContentLoaded', renderServices);
 </script>

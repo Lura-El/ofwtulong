@@ -12,4 +12,12 @@
 
     @include('partials.services')
 
+    @include('partials.offers-benefits')
+
+    @include('partials.platform')
+
+    @include('partials.why-exist')
+
+    @include('partials.support')
+
 @endsection

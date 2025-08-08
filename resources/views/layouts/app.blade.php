@@ -18,10 +18,10 @@
             body: ['Inter', 'sans-serif'],
           },
           colors: {
-            primary: '#4682A9',
-            accent: '#749BC2',
-            support: '#91C8E4',
-            bg: '#FFFFFE',
+            primary: '#F9FAFB',     // Very light gray
+            accent: '#FEC601',      // Warm gold (calls to action)
+            support: '#3ABEF9',     // Calm bright blue
+            bg: '#0B1D2A', 
           }
         }
       }
@@ -45,7 +45,7 @@
 
   @include('layouts.navigation')
 
-  <main class="container mx-auto px-4 py-6">
+  <main>
     @yield('content')
   </main>
 
@@ -54,6 +54,8 @@
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 
   <!-- Mobile nav toggle -->
   <script>
@@ -73,7 +75,9 @@
     AOS.init({
         duration: 800,
         once: false,
-        mirror: true
+        mirror: true,
+        easing: 'ease-out'
+
     });
   </script>
 
