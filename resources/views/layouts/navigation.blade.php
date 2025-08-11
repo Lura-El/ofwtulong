@@ -26,7 +26,7 @@
         <!-- Help Centre Dropdown (Desktop) -->
         <div class="relative group">
           <button class="hover:text-[#FEC601] transition duration-300">Help Centre</button>
-            <div class="absolute hidden group-hover:block bg-white text-[#0B1D2A] rounded shadow-lg mt-2 z-10 min-w-[200px]">
+            <div class="absolute hidden group-hover:block bg-white text-[#0B1D2A] rounded shadow-lg  z-10 min-w-[200px]">
             <ul class="py-2 px-4 space-y-1 text-sm">
               <li>
                 <a href="{{ route('contact') }}">
